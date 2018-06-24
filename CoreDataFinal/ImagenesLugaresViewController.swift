@@ -100,8 +100,9 @@ extension ImagenesLugaresViewController: UIImagePickerControllerDelegate, UINavi
         
         do {
             try contexto.save()
-            bringImages()
-            coleccion.reloadData() 
+            //se modifica ya que esta parte ahora se actualiza con el refresh control
+            //bringImages()
+            //coleccion.reloadData()
             dismiss(animated: true, completion: nil)
             print("Se guardo la imagen")
         } catch let error as NSError {
