@@ -39,6 +39,11 @@ class ViewController: UIViewController {
             if let vc = segue.destination as? ImagenesLugaresViewController, let id = tabla.indexPathForSelectedRow {
                 vc.imagenLugar = lugares[id.row]
             }
+        } else if segue.identifier == "mapa" {
+            let id = sender as! NSIndexPath
+            let fila = lugares[id.row]
+            let destino = segue.destination as! MapaViewController
+            destino.coordLugares = fila
         }
     }
 }
@@ -68,7 +73,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let btnMapa = UITableViewRowAction(style: .normal, title: "Mapa") { (action, indexPath) in
-            print("mapeando")
+            self.performSegue(withIdentifier: "mapa", sender: indexPath)
         }
         btnMapa.backgroundColor = UIColor.blue
         

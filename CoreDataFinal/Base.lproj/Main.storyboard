@@ -79,11 +79,41 @@
                     <connections>
                         <outlet property="tabla" destination="EZ9-bw-20n" id="tCJ-V0-eb8"/>
                         <segue destination="Hj0-mh-6dx" kind="show" identifier="imageSegue" id="d0I-sZ-kp1"/>
+                        <segue destination="qGf-6O-FH5" kind="show" identifier="mapa" id="maI-Bh-mfj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2026" y="419"/>
+        </scene>
+        <!--Mapa View Controller-->
+        <scene sceneID="ypg-oz-2Xf">
+            <objects>
+                <viewController id="qGf-6O-FH5" customClass="MapaViewController" customModule="CoreDataFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wLW-ne-bvR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bnr-zC-0fi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bnr-zC-0fi" firstAttribute="leading" secondItem="HcQ-iH-Jan" secondAttribute="leading" id="FGg-LR-HqQ"/>
+                            <constraint firstItem="Bnr-zC-0fi" firstAttribute="bottom" secondItem="HcQ-iH-Jan" secondAttribute="bottom" id="ZHh-Cj-Q6H"/>
+                            <constraint firstItem="Bnr-zC-0fi" firstAttribute="trailing" secondItem="HcQ-iH-Jan" secondAttribute="trailing" id="cvQ-FD-7mU"/>
+                            <constraint firstItem="Bnr-zC-0fi" firstAttribute="top" secondItem="HcQ-iH-Jan" secondAttribute="top" id="ls0-2J-CYy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HcQ-iH-Jan"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapa" destination="Bnr-zC-0fi" id="9KK-gO-Fle"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCy-Gk-xWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2025" y="1143"/>
         </scene>
         <!--Imagenes Lugares View Controller-->
         <scene sceneID="LCd-ka-Qs5">
@@ -139,11 +169,54 @@
                     </view>
                     <connections>
                         <outlet property="coleccion" destination="W5R-yc-wGp" id="sOP-E7-AmR"/>
+                        <segue destination="gXI-2g-bD8" kind="show" identifier="imagen" id="Zdu-TJ-VQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H26-5d-pAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2836" y="418.74062968515744"/>
+        </scene>
+        <!--Imagen Vista View Controller-->
+        <scene sceneID="Bjg-fI-Dqd">
+            <objects>
+                <viewController id="gXI-2g-bD8" customClass="ImagenVistaViewController" customModule="CoreDataFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UWE-8O-AjE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DVw-ft-RjW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="524"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiX-R1-Tjz">
+                                <rect key="frame" x="0.0" y="588" width="375" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Eliminar Imagen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="eliminar:" destination="gXI-2g-bD8" eventType="touchUpInside" id="JhE-h8-Q02"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AiX-R1-Tjz" firstAttribute="leading" secondItem="mAc-eE-tB5" secondAttribute="leading" id="CXZ-bt-wYi"/>
+                            <constraint firstItem="AiX-R1-Tjz" firstAttribute="top" secondItem="DVw-ft-RjW" secondAttribute="bottom" id="GIU-4t-lL4"/>
+                            <constraint firstItem="AiX-R1-Tjz" firstAttribute="trailing" secondItem="mAc-eE-tB5" secondAttribute="trailing" id="OdI-dM-Dnt"/>
+                            <constraint firstItem="DVw-ft-RjW" firstAttribute="trailing" secondItem="mAc-eE-tB5" secondAttribute="trailing" id="Um9-QI-Sbw"/>
+                            <constraint firstItem="AiX-R1-Tjz" firstAttribute="bottom" secondItem="mAc-eE-tB5" secondAttribute="bottom" id="Wau-FO-OsT"/>
+                            <constraint firstItem="DVw-ft-RjW" firstAttribute="top" secondItem="mAc-eE-tB5" secondAttribute="top" id="p8K-uW-exL"/>
+                            <constraint firstItem="DVw-ft-RjW" firstAttribute="leading" secondItem="mAc-eE-tB5" secondAttribute="leading" id="tvT-KB-D1F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mAc-eE-tB5"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagen" destination="DVw-ft-RjW" id="v2A-49-EwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R61-dK-ucY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3613.5999999999999" y="418.74062968515744"/>
         </scene>
         <!--Agregar-->
         <scene sceneID="IDF-9J-3nu">
@@ -222,6 +295,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IRT-iF-Uq5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L5a-2y-BAj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
