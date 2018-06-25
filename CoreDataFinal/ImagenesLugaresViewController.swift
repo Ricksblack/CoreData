@@ -129,4 +129,17 @@ extension ImagenesLugaresViewController: UICollectionViewDelegate, UICollectionV
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "imagen", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "imagen" {
+            if let id = sender as? NSIndexPath {
+                let fila = imagenes[id.row]
+                let destino = segue.destination as! ImagenVistaViewController
+                destino.imagenLugar = fila
+            }
+        }
+    }
 }
