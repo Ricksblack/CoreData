@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C1D01DA20E0578400C23ECD /* ImagenVistaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D01D920E0578400C23ECD /* ImagenVistaViewController.swift */; };
 		3C1D01DC20E0901200C23ECD /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D01DB20E0901200C23ECD /* MapaViewController.swift */; };
+		3C670054210EB48A00129098 /* MapaFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C670053210EB48A00129098 /* MapaFullViewController.swift */; };
 		3C81D38E209695A5004FF2A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C81D38D209695A5004FF2A0 /* AppDelegate.swift */; };
 		3C81D390209695A5004FF2A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C81D38F209695A5004FF2A0 /* ViewController.swift */; };
 		3C81D393209695A5004FF2A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C81D391209695A5004FF2A0 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		3C1D01D920E0578400C23ECD /* ImagenVistaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenVistaViewController.swift; sourceTree = "<group>"; };
 		3C1D01DB20E0901200C23ECD /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		3C670053210EB48A00129098 /* MapaFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaFullViewController.swift; sourceTree = "<group>"; };
 		3C81D38A209695A5004FF2A0 /* CoreDataFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C81D38D209695A5004FF2A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C81D38F209695A5004FF2A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				3C81D3A82096F05D004FF2A0 /* ImagenCollectionViewCell.swift */,
 				3C1D01D920E0578400C23ECD /* ImagenVistaViewController.swift */,
 				3C1D01DB20E0901200C23ECD /* MapaViewController.swift */,
+				3C670053210EB48A00129098 /* MapaFullViewController.swift */,
 				3C81D391209695A5004FF2A0 /* Main.storyboard */,
 				3C81D397209695A5004FF2A0 /* Assets.xcassets */,
 				3C81D399209695A5004FF2A0 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			files = (
 				3C81D396209695A5004FF2A0 /* CoreDataFinal.xcdatamodeld in Sources */,
 				3C1D01DC20E0901200C23ECD /* MapaViewController.swift in Sources */,
+				3C670054210EB48A00129098 /* MapaFullViewController.swift in Sources */,
 				3C81D390209695A5004FF2A0 /* ViewController.swift in Sources */,
 				3C81D3A52096A4F6004FF2A0 /* AgregarViewController.swift in Sources */,
 				3C81D3A72096DC7C004FF2A0 /* ImagenesLugaresViewController.swift in Sources */,
